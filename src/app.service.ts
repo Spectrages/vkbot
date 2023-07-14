@@ -16,7 +16,13 @@ export class AppService {
 
   onModuleInit() {
     this.vk.updates.on('message_new', async (context) => {
-      console.log(context.text);
+      if (context.text.toLowerCase() === 'test message') {
+        try {
+          await context.send('Привет, я работаю');
+        } catch (error) {
+          console.error(error);
+        }
+      }
     });
 
     this.vk.updates
