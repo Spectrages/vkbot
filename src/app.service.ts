@@ -23,7 +23,6 @@ export class AppService {
 
     this.users = ['spectrages', 'snusmumrick', 'schweppeses'];
     //'just_stereotype',
-    //'schweppeses',
     this.accessToken = 'fb0af6778b3272bc348ce1852ee238b7';
   }
 
@@ -88,7 +87,6 @@ export class AppService {
   @Interval(840000)
   executeTask() {
     this.logger.debug('Executing task every 14 minutes');
-    console.log('Hello');
   }
 
   async sendMessage(screenName: string, message: string) {
